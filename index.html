@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phishing Awareness</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#what-is-phishing">What is Phishing?</a></li>
+                <li><a href="#protect-yourself">How to Protect Yourself</a></li>
+                <li><a href="#regulations">Regulations</a></li>
+                <li><a href="#quiz">Phishing Quiz</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home">
+        <h1>Welcome to Phishing Awareness</h1>
+        <p>Learn how to recognize and protect yourself from phishing attacks.</p>
+    </section>
+
+    <section id="what-is-phishing">
+        <h2>What is Phishing?</h2>
+        <p>Phishing is a form of cyber attack where fraudsters attempt to obtain sensitive information like passwords, credit card details, or personal identification information by impersonating legitimate sources. They typically use emails, websites, or text messages to deceive users into providing personal data.</p>
+    </section>
+
+    <section id="protect-yourself">
+        <h2>How to Protect Yourself</h2>
+        <ul>
+            <li>Never click on suspicious links in emails or messages.</li>
+            <li>Always verify the source before providing sensitive information.</li>
+            <li>Check website URLs for security (e.g., HTTPS).</li>
+            <li>Enable two-factor authentication wherever possible.</li>
+            <li>Regularly update passwords and use strong, unique passwords for each account.</li>
+        </ul>
+    </section>
+
+    <section id="regulations">
+        <h2>Regulations: Ireland & Europe</h2>
+        <h3>GDPR (General Data Protection Regulation)</h3>
+        <p>The GDPR is a regulation in EU law that focuses on data protection and privacy. It requires businesses to protect the personal data and privacy of EU citizens. In the case of phishing, organizations are required to notify users of potential breaches that could compromise their personal data.</p>
+
+        <h3>Irish Cybersecurity Regulations</h3>
+        <p>In Ireland, the National Cyber Security Centre (NCSC) plays a critical role in managing cybersecurity issues, including phishing threats. The NCSC provides guidance on how individuals and organizations can protect themselves from online threats.</p>
+
+        <h3>ePrivacy Directive</h3>
+        <p>The ePrivacy Directive applies to electronic communications and includes provisions to prevent unsolicited communications such as phishing emails. It enforces strict regulations for businesses when processing data related to electronic communications.</p>
+    </section>
+
+    <section id="quiz">
+        <h2>Phishing Awareness Quiz</h2>
+        <p>Test your knowledge about phishing with this short quiz!</p>
+        <form id="quizForm"><br>
+            <p>1. What is a common characteristic of a phishing email?</p>
+            <label>
+                <input type="radio" name="q1" value="1" required>
+                Contains a suspicious link
+            </label>
+            <label>
+                <input type="radio" name="q1" value="0">
+                Contains important attachments
+            </label><br>
+    
+            <p>2. How can you identify a phishing website?</p>
+            <label>
+                <input type="radio" name="q2" value="1" required>
+                The URL starts with "https" and shows a padlock
+            </label>
+            <label>
+                <input type="radio" name="q2" value="0">
+                The URL starts with "http" and lacks a padlock
+            </label><br>
+    
+            <p>3. What should you do if you receive a suspicious email?</p>
+            <label>
+                <input type="radio" name="q3" value="1" required>
+                Report it to the relevant authorities or company
+            </label>
+            <label>
+                <input type="radio" name="q3" value="0">
+                Ignore it and delete it
+            </label><br>
+    
+            <button type="button" onclick="submitQuiz()">Check Answers</button>
+        </form>
+        <p id="quizResult"></p>
+    </section> 
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>If you have received a phishing attempt or need more information on how to report it, please contact us:</p>
+        <form id="contactForm" action="http://localhost:3000/submit-form" method="POST">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required><br>
+            
+            <label for="email">Your Email:</label>
+            <input type="email" id="email" name="email" required><br>
+        
+            <label for="message">Message:</label><br>
+            <textarea id="message" name="message" rows="4" cols="50" required></textarea><br>
+        
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Phishing Awareness. All rights reserved.</p>
+    </footer>
+
+    <script src="validation.js"></script>
+</body>
+</html>
